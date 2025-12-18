@@ -16,6 +16,17 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
+    combos{
+        compatible = "zmk,combos";
+        combo_esc { 
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            layers = <0>;
+            bindings = <&kp ESC>;
+        };
+
+    };
+
     behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
