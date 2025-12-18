@@ -131,35 +131,54 @@
                 >;
                 };
 
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
-// | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
-                        display-name = "Lower";
-                        bindings = <
-   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-   &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
-                        >;
+//                 lower_layer {
+// // -----------------------------------------------------------------------------------------
+// // | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
+// // | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
+// // | BTCLR |     |     |     |     |     |     |     |     |     |     |
+// //               | GUI |     | SPC |     | ENT | ESC | TAB |
+//                         display-name = "Lower";
+//                         bindings = <
+//    &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+//    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
+//    &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
+//                              &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
+//                         >;
+//                 };
+                num_layer {
+                display-name = "Num";
+                bindings = <
+                &kp LBKT   &kp N1  &kp N2  &kp N3  &kp RBKT        &trans   &trans      &kp RCTRL  &trans  &trans 
+                &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp GRAVE       &trans   &kp RSHFT   &kp RGUI   &kp RALT  &trans 
+                &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH        &trans   &trans      &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2
+                                   &kp N0  &trans  &kp BSPC        &trans   &trans      &trans
+                >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
-                        display-name = "Raise";
-                        bindings = <
+//                 raise_layer {
+// // -----------------------------------------------------------------------------------------
+// // | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
+// // | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
+// // | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+// //            | GUI | ESC | SPC |     | ENT |     | TAB |
+//                         display-name = "Raise";
+//                         bindings = <
 
-   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
-                        >;
+//    AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
+//    AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
+//    AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
+//                        &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
+//                         >;
+//                 };
+
+                arrow_layer {
+                display-name = "Arrow";
+                bindings = <
+                &kp LC(LS(BSLH))  &kp LC(LA(LG(W)))  &kp LCTRL  &trans     &trans          &trans     &trans     &kp UP    &trans      &trans
+                &trans            &kp LALT           &kp LGUI   &kp LSHFT   &trans         &trans     &kp LEFT   &kp DOWN  &kp RIGHT   &trans
+                &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &kp LG(S)       &kp LG(N)  &trans     &trans    &trans      &trans
+                                                     &trans     &trans     &trans          &trans     &trans     &trans
+                >;
                 };
 
                 extra_1 {
