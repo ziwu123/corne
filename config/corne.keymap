@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
-
+#include <dt-bindings/zmk/behaviors.h>
 
 #define AS(keycode) &as LS(keycode) keycode
 
@@ -16,6 +16,7 @@
     chosen {
       zmk,matrix_transform = &foostan_corne_5col_layout;
     };
+
 
     combos {
     compatible = "zmk,combos";
