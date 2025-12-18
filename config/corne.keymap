@@ -25,7 +25,63 @@
             bindings = <&kp ESC>;
         };
 
-    };
+        combo_dquote{
+                timeout-ms = <50>;
+                key-positions = <1 2>;
+                layers = <0>;
+                bindings = <&kp DQT>;  
+            };
+
+            combo_quote{
+                timeout-ms = <50>;
+                key-positions = <7 8>;
+                layers = <0>;
+                bindings = <&kp SQT>;
+            };
+
+            combo_lpar{
+                timeout-ms = <50>;
+                key-positions = <11 12>;
+                layers = <0>;
+                bindings = <&kp LPAR>;
+            };
+
+            combo_rpar{
+                timeout-ms = <50>;
+                key-positions = <17 18>;
+                layers = <0>;
+                bindings = <&kp RPAR>;
+            };
+
+            combo_caps{
+                timeout-ms = <50>;
+                key-positions = <27 28>;
+                layers = <0>;
+                bindings = <&kp CAPS>;
+            };
+
+            combo_capsword{
+                timeout-ms = <50>;
+                key-positions = <21 22>;
+                layers = <0>;
+                bindings = <&caps_word>;
+            };
+
+            combo_lskshft{
+                timeout-ms = <50>;
+                key-positions = <12 13>;
+                layers = <0>;
+                bindings = <&sk LSHIFT>;
+            };
+
+            combo_rskshft{
+                timeout-ms = <50>;
+                key-positions = <16 17>;
+                layers = <0>;
+                bindings = <&sk RSHIFT>;
+            };
+
+    }; // combo ends
 
     behaviors {
         as: auto_shift {
@@ -37,7 +93,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -50,19 +106,29 @@
         keymap {
                 compatible = "zmk,keymap";
 
+//                 default_layer {
+// // -----------------------------------------------------------------------------------------
+// // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
+// // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
+// // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
+// //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
+//                         display-name = "Base";
+//                         bindings = <
+//    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
+//    AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
+//    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
+//         &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
+//                         >;
+//                 };
+
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
-// |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
-// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
-                        display-name = "Base";
-                        bindings = <
-   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
-   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
-   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
-        &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
-                        >;
+                display-name = "Base";
+                bindings = < 
+                &kp Q                       &kp W               &hm LCTRL E         &kp R                   &kp T          &kp Y        &kp U        &hm RCTRL I     &kp O         &kp P
+                &kp A                       &hm LALT S   &hm LGUI D             &hm LSHFT F  &kp G          &kp H        &hm RSHFT J  &hm RGUI K      &hm RALT L    &lt 2 SEMI
+                &hm LSHFT Z       &kp X                 &kp C                           &kp V               &kp B          &hm B N      &kp M        &kp COMMA       &kp DOT       &hm LSHFT FSLH
+                                                                                 &lt 3 F4            &lt 1 SPACE            &lt 2 TAB      &lt 2 RET    &lt 1 BSPC   &lt 3 F11  
+                >;
                 };
 
                 lower_layer {
