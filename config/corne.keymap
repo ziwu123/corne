@@ -153,10 +153,10 @@
                 default_layer {
                 display-name = "Base";
                 bindings = < 
-                &kp Q                       &kp W               &hml LCTRL E         &kp R                   &kp T          &kp Y        &kp U        &hmr RCTRL I     &kp O         &kp P
-                &kp A                       &hml LALT S   &hml LGUI D             &hml LSHFT F  &kp G          &kp H        &hmr RSHFT J  &hmr RGUI K      &hmr RALT L    &lt 2 SEMI
-                &hml LSHFT Z       &kp X                 &kp C                           &kp V               &kp B          &hm B N      &kp M        &kp COMMA       &kp DOT       &hmr LSHFT FSLH
-                                                                                 &lt 3 F4            &lt 1 SPACE            &lt 2 TAB      &lt 2 RET    &lt 1 BSPC   &lt 3 F11  
+                &kp Q                       &kp W               &hml LCTRL E        &kp R                           &kp T                                  &kp Y           &kp U                        &hmr LCTRL I            &kp O                   &kp P
+                &kp A                       &hml LALT S   &hml LGUI D           &hml LSHFT F          &kp G                                 &kp H          &hmr LSHFT J       &hmr LGUI K              &hmr LALT L     &lt 2 SEMI
+                &hml LSHFT Z       &kp X                 &kp C                        &kp V                           &kp B                                  &hm B N    &kp M                       &kp COMMA               &kp DOT             &hmr LSHFT FSLH
+                                                                                 &lt 3 F4                     &lt 1 SPACE               &lt 2 TAB                          &lt 2 RET    &lt 1 BSPC             &kp RALT  
                 >;
                 };
 
@@ -177,10 +177,10 @@
                 num_layer {
                 display-name = "Num";
                 bindings = <
-                &kp LBKT   &kp N1  &kp N2  &kp N3  &kp RBKT        &trans   &trans      &kp RCTRL  &trans  &trans 
-                &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp GRAVE       &trans   &kp RSHFT   &kp RGUI   &kp RALT  &trans 
-                &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSLH        &trans   &trans      &bt BT_SEL 0     &bt BT_SEL 1 &bt BT_SEL 2
-                                   &kp N0  &trans  &kp BSPC        &trans   &trans      &trans
+                &kp LBKT        &kp N1          &kp N2          &kp N3          &kp RBKT                               &trans        &trans                  &kp LCTRL           &trans                      &trans 
+                &kp EQUAL       &kp N4          &kp N5          &kp N6          &kp GRAVE                          &trans        &kp LSHFT        &kp LGUI              &kp LALT                 &trans 
+                &kp MINUS       &kp N7          &kp N8          &kp N9          &kp BSLH                              &trans        &trans                  &bt BT_SEL 0     &bt BT_SEL 1          &bt BT_SEL 2
+                                                                        &kp N0          &trans          &kp BSPC                              &trans         &trans                 &trans
                 >;
                 };
 
@@ -203,10 +203,10 @@
                 arrow_layer {
                 display-name = "Arrow";
                 bindings = <
-                &kp LC(LS(BSLH))  &kp LC(LA(LG(W)))  &kp LCTRL  &trans     &trans          &trans     &trans     &kp UP    &trans      &trans
-                &trans            &kp LALT           &kp LGUI   &kp LSHFT   &trans         &trans     &kp LEFT   &kp DOWN  &kp RIGHT   &trans
-                &kp LG(Z)         &kp LG(X)          &kp LG(C)  &kp LG(V)  &kp LG(S)       &kp LG(N)  &trans     &trans    &trans      &trans
-                                                     &trans     &trans     &trans          &trans     &trans     &trans
+                &trans                               &trans                           &kp LCTRL       &trans                  &trans                               &trans                    &trans                         &trans                                   &trans                  &trans
+                &trans                           &kp LALT                          &kp LGUI         &kp LSHFT           &trans                             &kp LEFT               &kp DOWN                  &kp UP                               &kp RIGHT           &trans
+                &trans                             &trans                               &trans                &trans                  &trans                           &kp C_MUTE        &kp C_VOL_DN              &kp C_VOL_UP          &trans                      &trans
+                                                                                                         &trans             &trans                     &trans                          &trans                       &trans                            &trans
                 >;
                 };
 
