@@ -147,7 +147,7 @@
                 default_layer {
                 display-name = "Base";
                 bindings = < 
-                &kp Q                       &kp W               &kp E                              &kp R                               &kp T                                  &kp Y                            &kp U                        &kp I                         &kp O                   &sl 3
+                &kp Q                       &kp W               &kp E                              &kp R                               &kp T                                  &kp Y                            &kp U                        &kp I                         &kp O                   &lt 3 LALT
                 &kp A                       &hml LALT S   &hml LCTRL D         &hml LSHFT F          &hml LGUI G                     &hmr LGUI H          &hmr LSHFT J       &hmr LCTRL K        &hmr LALT L     &kp P
                 &hml LSHFT Z       &kp X                 &kp C                        &hm Q V                          &kp B                                &hm B N                 &kp M                        &kp COMMA               &kp DOT        &hmr LSHFT LALT
                                                                                  &lt 2 CAPS                &lt 1 SPACE               &hml LCTRL TAB          &lt 2 RET    &lt 1 BSPC               &kp RALT  
@@ -214,7 +214,7 @@
                 >;
                 };
 
-                extra_2 {
+                extra_1 {
                         status = "reserved";
                 // display-name = "numpad";
                 // bindings = <
@@ -225,7 +225,7 @@
                 // >;
                 };
 
-                extra_3 {
+                extra_2 {
                         status = "reserved";
                 };
         };
